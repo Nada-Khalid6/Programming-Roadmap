@@ -47,8 +47,8 @@ tracks = {
             {
                 "title": "مقدمة في البرمجة والخوارزميات",
                 "desc": "فهم ما هي البرمجة والخوارزميات",
-                "ar": "https://www.youtube.com/playlist?list=PLDoPjvoNmBAw4eOj58MZPakHjaO3frVMF",
-                "en": "https://www.youtube.com/playlist?list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU",
+                "ar": "https://youtube.com/playlist?list=PLDoPjvoNmBAyE_gei5d18qkfIe-Z8mocs&si=_Gp8S1eHsAt2MraT",
+                "en": "https://youtube.com/playlist?list=PLDoPjvoNmBAyE_gei5d18qkfIe-Z8mocs&si=_Gp8S1eHsAt2MraT",
                 "duration": "3 ساعات"
             },
             {
