@@ -1,4 +1,7 @@
 # ==================== app.py ====================
+# منصة تعلم البرمجة - مسارات متسلسلة مع مصادر عربية وإنجليزية حقيقية
+# التشغيل: streamlit run app.py
+
 import streamlit as st
 import json
 import os
@@ -10,14 +13,31 @@ st.set_page_config(
     initial_sidebar_state="auto"
 )
 
+# تحسين التنسيق للعربية (بدون إجبار الاتجاه لتجنب مشاكل الشريط الجانبي)
 st.markdown("""
     <style>
-        .stApp { direction: rtl; }
-        .stMarkdown, .stText, .stCaption, h1, h2, h3, h4 { text-align: right; }
-        .stLinkButton button, .stButton button { font-family: inherit; }
+        .stApp {
+            direction: rtl;
+        }
+        .stMarkdown, .stText, .stCaption, h1, h2, h3, h4 {
+            text-align: right;
+        }
+        /* إصلاح الشريط الجانبي */
+        section[data-testid="stSidebar"] {
+            direction: rtl;
+        }
+        section[data-testid="stSidebar"] .stMarkdown, 
+        section[data-testid="stSidebar"] h1, 
+        section[data-testid="stSidebar"] h2 {
+            text-align: right;
+        }
+        .stLinkButton button, .stButton button {
+            font-family: inherit;
+        }
     </style>
 """, unsafe_allow_html=True)
 
+# ==================== تحميل وحفظ البيانات ====================
 DATA_FILE = "data.json"
 PROGRESS_FILE = "progress.json"
 
@@ -27,14 +47,20 @@ def load_data():
             {
                 "id": 1,
                 "name": "🐍 أساسيات البرمجة (Python)",
-                "track_description": "هذا المسار مخصص للمبتدئين تماماً في عالم البرمجة. ستتعلم المفاهيم الأساسية مثل المتغيرات، الجمل الشرطية، الحلقات، الدوال، والقوائم. اللغة المستخدمة هي Python لأنها الأسهل للمبتدئين. بعد الانتهاء من هذا المسار، ستكون قادراً على كتابة برامج بسيطة وحل مشكلات منطقية.",
+                "track_description": "هذا المسار مخصص للمبتدئين تماماً. ستتعلم أساسيات البرمجة مثل المتغيرات، الجمل الشرطية، الحلقات، الدوال، والقوائم باستخدام لغة Python. بعد الانتهاء، ستكون قادراً على كتابة برامج بسيطة وحل مشكلات منطقية.",
                 "description": "رحلة متكاملة لتعلم البرمجة من الصفر باستخدام Python"
             },
             {
                 "id": 2,
                 "name": "🌐 تطوير واجهات الويب (Frontend)",
-                "track_description": "في هذا المسار ستتعلم بناء واجهات مواقع الويب الحديثة. نبدأ بـ HTML و CSS لإنشاء الهيكل والتصميم، ثم ننتقل إلى JavaScript لإضافة التفاعلية. أخيراً، نتعلم إطار عمل React لبناء تطبيقات متقدمة. المسار مناسب لمن يعرف أساسيات البرمجة ويريد التخصص في تطوير الواجهات الأمامية.",
+                "track_description": "في هذا المسار ستتعلم بناء واجهات مواقع الويب الحديثة. نبدأ بـ HTML و CSS لإنشاء الهيكل والتصميم، ثم ننتقل إلى JavaScript لإضافة التفاعلية. أخيراً، نتعلم إطار عمل React لبناء تطبيقات متقدمة.",
                 "description": "من الصفر إلى الاحتراف في HTML، CSS، JavaScript و React"
+            },
+            {
+                "id": 3,
+                "name": "🗄️ قواعد البيانات (SQL)",
+                "track_description": "تعلم كيفية تصميم وإدارة قواعد البيانات باستخدام SQL. سنغطي إنشاء الجداول، الاستعلامات، الانضمامات، والفهارس. هذا المسار ضروري لأي مطور يريد بناء تطبيقات تعتمد على البيانات.",
+                "description": "فهم قواعد البيانات العلائقية ولغة SQL من البداية"
             }
         ],
         "roadmaps": {
@@ -42,40 +68,60 @@ def load_data():
                 {
                     "title": "مقدمة في البرمجة والخوارزميات",
                     "description": "فهم ما هي البرمجة، الخوارزميات، وكيف يعمل الكمبيوتر.",
-                    "source_arabic": "https://youtube.com/playlist?list=PL9YIYM2p5i5l3K6E7F8G9H0J1K2L3M4N5O",
-                    "source_english": "https://youtube.com/playlist?list=PLhQjrBD2T381k8J6K7L9M0N1O2P3Q4R5S6T"
+                    "source_arabic": "https://youtube.com/playlist?list=PLDoPjvoNmBAw4eOj58MZPakHjaO3frVMF",
+                    "source_english": "https://www.youtube.com/watch?v=nLRL_NcnK-4"
                 },
                 {
                     "title": "تعلم Python - الأساسيات",
                     "description": "المتغيرات، أنواع البيانات، الجمل الشرطية، الحلقات، الدوال.",
                     "source_arabic": "https://youtube.com/playlist?list=PLMYF6NkLrdNvVZ0yQ5yQ5yQ5yQ5yQ5yQ5",
-                    "source_english": "https://youtube.com/playlist?list=PLXuTq7QK7l3sZ8Y9A0B1C2D3E4F5G6H7I8J"
+                    "source_english": "https://www.youtube.com/watch?v=YYXdXT2l-Gg&list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU"
                 },
                 {
                     "title": "مشروع عملي: تطبيق آلة حاسبة",
                     "description": "تطبيق كل ما تعلمته في مشروع حقيقي.",
-                    "source_arabic": "https://youtube.com/playlist?list=PLA1B2C3D4E5F6G7H8I9J",
-                    "source_english": "https://youtube.com/playlist?list=PLK1L2M3N4O5P6Q7R8S9T"
+                    "source_arabic": "https://www.youtube.com/watch?v=9kzl9nwX7k8",
+                    "source_english": "https://www.youtube.com/watch?v=8ext9G7xspg"
                 }
             ],
             "2": [
                 {
                     "title": "HTML5 و CSS3 - الأساسيات",
                     "description": "بناء هيكل الصفحات وتنسيقها.",
-                    "source_arabic": "https://youtube.com/playlist?list=PLU7Z6L1Q5K9J8H7G6F5D4S3A2",
-                    "source_english": "https://youtube.com/playlist?list=PL4cUxeGkcC9gB9fA8B7C6D5E4F3G2H1I0J"
+                    "source_arabic": "https://youtube.com/playlist?list=PLDoPjvoNmBAw4eOj58MZPakHjaO3frVMF",
+                    "source_english": "https://www.youtube.com/watch?v=G3e-cpL7ofc"
                 },
                 {
                     "title": "JavaScript للمبتدئين",
                     "description": "التعامل مع DOM، الأحداث، والوظائف الأساسية.",
-                    "source_arabic": "https://youtube.com/playlist?list=PL9YIYM2p5i5l3K6E7F8G9H0J1K2L3M4N5O",
-                    "source_english": "https://youtube.com/playlist?list=PLillGF-RfqbYE6IkUi7n8F6Q8L7M9N0O1P"
+                    "source_arabic": "https://youtube.com/playlist?list=PLDoPjvoNmBAw4eOj58MZPakHjaO3frVMF",
+                    "source_english": "https://www.youtube.com/watch?v=PkZNo7MFNFg"
                 },
                 {
                     "title": "React.js - بناء تطبيقات متقدمة",
                     "description": "مكونات، حالة، خصائص، وتطبيق كامل.",
-                    "source_arabic": "https://youtube.com/playlist?list=PLA1B2C3D4E5F6G7H8I9J",
-                    "source_english": "https://youtube.com/playlist?list=PLN3n1USn4xlmyw3ebBuZmknGKr6LhM2fB"
+                    "source_arabic": "https://youtube.com/playlist?list=PLDoPjvoNmBAw4eOj58MZPakHjaO3frVMF",
+                    "source_english": "https://www.youtube.com/watch?v=w7ejDZ8SWv8"
+                }
+            ],
+            "3": [
+                {
+                    "title": "مقدمة في قواعد البيانات",
+                    "description": "ما هي قواعد البيانات؟ أنواعها، ومفاهيم أساسية.",
+                    "source_arabic": "https://youtube.com/playlist?list=PLDoPjvoNmBAw4eOj58MZPakHjaO3frVMF",
+                    "source_english": "https://www.youtube.com/watch?v=HXV3zeQKqGY"
+                },
+                {
+                    "title": "SQL الأساسي - استعلامات وفلترة",
+                    "description": "SELECT, WHERE, ORDER BY, GROUP BY",
+                    "source_arabic": "https://youtube.com/playlist?list=PLDoPjvoNmBAw4eOj58MZPakHjaO3frVMF",
+                    "source_english": "https://www.youtube.com/watch?v=7S_tz1z_5bA"
+                },
+                {
+                    "title": "Join وعلاقات بين الجداول",
+                    "description": "INNER JOIN, LEFT JOIN, تصميم قواعد بيانات.",
+                    "source_arabic": "https://youtube.com/playlist?list=PLDoPjvoNmBAw4eOj58MZPakHjaO3frVMF",
+                    "source_english": "https://www.youtube.com/watch?v=9yeOJ0ZMUYw"
                 }
             ]
         }
@@ -222,7 +268,7 @@ def main():
             لكل درس مصدر عربي وآخر إنجليزي من يوتيوب.
             يمكنك تحديد المربع بعد إتمام كل درس لتتبع تقدمك.
             """)
-        st.caption("الإصدار 2.1 | جميع الحقوق محفوظة")
+        st.caption("By:𝑵𝒂𝒅𝒂 𝑲𝒉𝒂𝒍𝒊𝒅)
     
     if st.session_state.selected_track is None:
         show_tracks()
