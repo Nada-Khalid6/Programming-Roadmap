@@ -1,36 +1,69 @@
 import streamlit as st
+import json
+from datetime import datetime
+import os
 
-# إعداد الصفحة - بدون أي CSS إضافي
+# إعدادات الصفحة
 st.set_page_config(
     page_title="منصة تعلم البرمجة",
     page_icon="💻",
-    layout="wide"
+    layout="wide",
+    initial_sidebar_state="expanded"
 )
+
+# CSS للتأكد من أن الـ Sidebar في المكان الصحيح
+st.markdown("""
+<style>
+    [data-testid="stSidebar"] {
+        position: fixed !important;
+        left: 0 !important;
+        top: 0 !important;
+        height: 100vh !important;
+    }
+    
+    [data-testid="stSidebarContent"] {
+        padding-top: 2rem;
+    }
+    
+    .main {
+        margin-left: 21rem;
+    }
+    
+    .stTabs [data-baseweb="tab-list"] {
+        gap: 1rem;
+    }
+</style>
+""", unsafe_allow_html=True)
 
 # ======================= البيانات المدمجة =======================
 tracks = {
     1: {
         "name": "🐍 أساسيات البرمجة (Python)",
         "description": "رحلة متكاملة لتعلم البرمجة من الصفر باستخدام Python",
-        "long_desc": "هذا المسار مخصص للمبتدئين تماماً. ستتعلم أساسيات البرمجة مثل المتغيرات، الجمل الشرطية، الحلقات، الدوال، والقوائم.",
+        "long_desc": "هذا المسار مخصص للمبتدئين تماماً. ستتعلم أساسيات البرمجة مثل المتغيرات، الجمل الشرطية، الحلقات، الدوال، والقوائس.",
+        "difficulty": "مبتدئ",
+        "duration": "4 أسابيع",
         "steps": [
             {
                 "title": "مقدمة في البرمجة والخوارزميات",
                 "desc": "فهم ما هي البرمجة والخوارزميات",
-                "ar": "https://youtube.com/playlist?list=PLDoPjvoNmBAw4eOj58MZPakHjaO3frVMF",
-                "en": "https://www.youtube.com/watch?v=nLRL_NcnK-4"
+                "ar": "https://www.youtube.com/playlist?list=PLDoPjvoNmBAw4eOj58MZPakHjaO3frVMF",
+                "en": "https://www.youtube.com/playlist?list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU",
+                "duration": "3 ساعات"
             },
             {
                 "title": "تعلم Python - الأساسيات",
                 "desc": "المتغيرات، الجمل الشرطية، الحلقات، الدوال",
-                "ar": "https://youtube.com/playlist?list=PLMYF6NkLrdNvVZ0yQ5yQ5yQ5yQ5yQ5yQ5",
-                "en": "https://www.youtube.com/watch?v=YYXdXT2l-Gg&list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU"
+                "ar": "https://www.youtube.com/playlist?list=PLDoPjvoNmBAyXeV5jC5Z8yMPuHO9eFXL7",
+                "en": "https://www.youtube.com/playlist?list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU",
+                "duration": "8 ساعات"
             },
             {
                 "title": "مشروع عملي: آلة حاسبة",
                 "desc": "تطبيق عملي لكل ما تعلمته",
-                "ar": "https://www.youtube.com/watch?v=9kzl9nwX7k8",
-                "en": "https://www.youtube.com/watch?v=8ext9G7xspg"
+                "ar": "https://www.youtube.com/watch?v=KXY_J7CZ7Ow",
+                "en": "https://www.youtube.com/watch?v=8ext9G7xspg",
+                "duration": "ساعتان"
             }
         ]
     },
@@ -38,24 +71,29 @@ tracks = {
         "name": "🌐 تطوير واجهات الويب",
         "description": "من الصفر إلى الاحتراف في HTML, CSS, JavaScript و React",
         "long_desc": "في هذا المسار ستتعلم بناء واجهات مواقع الويب الحديثة. نبدأ بـ HTML و CSS ثم JavaScript ثم React.",
+        "difficulty": "مبتدئ - متوسط",
+        "duration": "6 أسابيع",
         "steps": [
             {
                 "title": "HTML و CSS - الأساسيات",
                 "desc": "بناء هيكل وتنسيق الصفحات",
-                "ar": "https://youtube.com/playlist?list=PLDoPjvoNmBAw4eOj58MZPakHjaO3frVMF",
-                "en": "https://www.youtube.com/watch?v=G3e-cpL7ofc"
+                "ar": "https://www.youtube.com/playlist?list=PLDoPjvoNmBAw4eOj58MZPakHjaO3frVMF",
+                "en": "https://www.youtube.com/playlist?list=PL4cUxeGkcC9ivBf_eKCPIAYXWzLlPAm6G",
+                "duration": "5 ساعات"
             },
             {
                 "title": "JavaScript للمبتدئين",
                 "desc": "التعامل مع DOM والأحداث",
-                "ar": "https://youtube.com/playlist?list=PLDoPjvoNmBAw4eOj58MZPakHjaO3frVMF",
-                "en": "https://www.youtube.com/watch?v=PkZNo7MFNFg"
+                "ar": "https://www.youtube.com/playlist?list=PLDoPjvoNmBAw4eOj58MZPakHjaO3frVMF",
+                "en": "https://www.youtube.com/playlist?list=PL4cUxeGkcC9haRX4IsKjI31V6pSvyUvxl",
+                "duration": "7 ساعات"
             },
             {
                 "title": "React.js - تطبيقات متقدمة",
                 "desc": "مكونات، حالة، خصائص",
-                "ar": "https://youtube.com/playlist?list=PLDoPjvoNmBAw4eOj58MZPakHjaO3frVMF",
-                "en": "https://www.youtube.com/watch?v=w7ejDZ8SWv8"
+                "ar": "https://www.youtube.com/playlist?list=PLDoPjvoNmBAyXeV5jC5Z8yMPuHO9eFXL7",
+                "en": "https://www.youtube.com/playlist?list=PL4cUxeGkcC9PI5PtvJ_je6S6EQG9GEsW9",
+                "duration": "10 ساعات"
             }
         ]
     },
@@ -63,32 +101,43 @@ tracks = {
         "name": "🗄️ قواعد البيانات (SQL)",
         "description": "فهم قواعد البيانات العلائقية ولغة SQL",
         "long_desc": "تعلم كيفية تصميم وإدارة قواعد البيانات باستخدام SQL.",
+        "difficulty": "متوسط",
+        "duration": "5 أسابيع",
         "steps": [
             {
                 "title": "مقدمة في قواعد البيانات",
                 "desc": "أنواع قواعد البيانات ومفاهيم أساسية",
-                "ar": "https://youtube.com/playlist?list=PLDoPjvoNmBAw4eOj58MZPakHjaO3frVMF",
-                "en": "https://www.youtube.com/watch?v=HXV3zeQKqGY"
+                "ar": "https://www.youtube.com/playlist?list=PLDoPjvoNmBAw4eOj58MZPakHjaO3frVMF",
+                "en": "https://www.youtube.com/playlist?list=PL08urSpVeNqjRQH2yVW-suQ318hJIUaDJ",
+                "duration": "4 ساعات"
             },
             {
                 "title": "SQL الأساسي",
                 "desc": "SELECT, WHERE, ORDER BY, GROUP BY",
-                "ar": "https://youtube.com/playlist?list=PLDoPjvoNmBAw4eOj58MZPakHjaO3frVMF",
-                "en": "https://www.youtube.com/watch?v=7S_tz1z_5bA"
+                "ar": "https://www.youtube.com/playlist?list=PLDoPjvoNmBAyXeV5jC5Z8yMPuHO9eFXL7",
+                "en": "https://www.youtube.com/playlist?list=PLUDwpEzHYYLvWEVDNFEv5XBJ2-kxNXyRP",
+                "duration": "6 ساعات"
             },
             {
                 "title": "Join والعلاقات",
-                "desc": "INNER JOIN, LEFT JOIN",
-                "ar": "https://youtube.com/playlist?list=PLDoPjvoNmBAw4eOj58MZPakHjaO3frVMF",
-                "en": "https://www.youtube.com/watch?v=9yeOJ0ZMUYw"
+                "desc": "INNER JOIN, LEFT JOIN, RIGHT JOIN",
+                "ar": "https://www.youtube.com/playlist?list=PLDoPjvoNmBAw4eOj58MZPakHjaO3frVMF",
+                "en": "https://www.youtube.com/playlist?list=PL9SnRnlzoyIENV8Tphe0b3qMLKfjlezQC",
+                "duration": "5 ساعات"
             }
         ]
     }
 }
 
-# حفظ التقدم (في الجلسة فقط، لإعادة التشغيل ستضيع - مناسب للتجربة)
+# ======================= إدارة الجلسة والبيانات =======================
 if "progress" not in st.session_state:
     st.session_state.progress = {}
+
+if "user_name" not in st.session_state:
+    st.session_state.user_name = None
+
+if "completed_tracks" not in st.session_state:
+    st.session_state.completed_tracks = []
 
 def mark_completed(track_id, step_idx, value):
     if track_id not in st.session_state.progress:
@@ -99,52 +148,137 @@ def reset_track(track_id):
     if track_id in st.session_state.progress:
         del st.session_state.progress[track_id]
 
-# ======================= واجهة المستخدم =======================
-st.title("🚀 منصة مسارات تعلم البرمجة")
-st.markdown("اختر تخصصك وابدأ رحلة التعلم خطوة بخطوة")
+def get_progress_percentage(track_id):
+    track = tracks[track_id]
+    total = len(track["steps"])
+    completed = sum(1 for i in range(total) if st.session_state.progress.get(track_id, {}).get(i, False))
+    return int(completed / total * 100) if total else 0
 
-# الشريط الجانبي - سيظهر على اليسار تلقائياً
+def embed_youtube_video(video_url):
+    """تحويل رابط يوتيوب إلى iframe قابل للتضمين"""
+    if "playlist?list=" in video_url:
+        playlist_id = video_url.split("list=")[1]
+        return f'<iframe width="100%" height="380" src="https://www.youtube.com/embed/videoseries?list={playlist_id}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+    elif "watch?v=" in video_url:
+        video_id = video_url.split("watch?v=")[1].split("&")[0]
+        return f'<iframe width="100%" height="380" src="https://www.youtube.com/embed/{video_id}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+    else:
+        return None
+
+# ======================= الشريط الجانبي =======================
 with st.sidebar:
-    st.header("💻 منصة التعلم")
-    st.markdown("مسارات برمجية متكاملة مع مصادر عربية وإنجليزية")
+    st.markdown("## 💻 منصة التعلم")
+    
+    if st.session_state.user_name:
+        st.success(f"مرحباً بك: **{st.session_state.user_name}** 👋")
+    else:
+        user_input = st.text_input("أدخل اسمك:")
+        if user_input:
+            st.session_state.user_name = user_input
+            st.rerun()
+    
     st.markdown("---")
-    st.markdown("**المميزات**")
-    st.markdown("- مسارات متسلسلة")
-    st.markdown("- مصادر عربية وإنجليزية")
-    st.markdown("- شيكليست للتقدم")
-    st.markdown("- إعادة تعيين التقدم")
+    st.markdown("### 📊 إحصائياتك")
+    
+    total_progress = 0
+    completed_count = 0
+    for tid in tracks.keys():
+        progress = get_progress_percentage(tid)
+        total_progress += progress
+        if progress == 100:
+            completed_count += 1
+    
+    avg_progress = int(total_progress / len(tracks)) if tracks else 0
+    st.metric("التقدم الإجمالي", f"{avg_progress}%")
+    st.metric("المسارات المكتملة", f"{completed_count}/{len(tracks)}")
+    
     st.markdown("---")
-    st.caption("By: Nada Khalid ✨♥")
+    st.markdown("### ⚡ المميزات")
+    st.markdown("""
+    - ✅ مسارات متسلسلة
+    - 🌍 مصادر عربية وإنجليزية
+    - 📊 تتبع التقدم
+    - 🎯 أهداف واضحة
+    - 📜 شهادات عند الإنجاز
+    """)
+    
+    st.markdown("---")
+    st.markdown("### 📞 تواصل معنا")
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        st.link_button("Twitter", "https://twitter.com")
+    with col2:
+        st.link_button("GitHub", "https://github.com")
+    with col3:
+        st.link_button("Email", "mailto:contact@example.com")
+    
+    st.markdown("---")
+    st.caption("© 2026 منصة التعلم - جميع الحقوق محفوظة")
 
-# الصفحة الرئيسية أو عرض المسار المختار
+# ======================= المحتوى الرئيسي =======================
+st.title("🚀 منصة مسارات تعلم البرمجة")
+st.markdown("### اختر تخصصك وابدأ رحلة التعلم خطوة بخطوة")
+
 if "selected_track" not in st.session_state:
-    # عرض البطاقات
-    cols = st.columns(3)
+    # =============== الصفحة الرئيسية ===============
+    st.markdown("---")
+    
+    col1, col2, col3 = st.columns(3)
+    
     for idx, (tid, track) in enumerate(tracks.items()):
-        with cols[idx % 3]:
+        with [col1, col2, col3][idx % 3]:
             with st.container(border=True):
                 st.subheader(track["name"])
                 st.write(track["description"])
-                if st.button(f"📖 عرض المسار", key=f"btn_{tid}"):
+                
+                # إحصائيات المسار
+                progress = get_progress_percentage(tid)
+                col_a, col_b = st.columns(2)
+                with col_a:
+                    st.caption(f"⏱️ {track['duration']}")
+                with col_b:
+                    st.caption(f"📈 {progress}%")
+                
+                # شريط التقدم
+                st.progress(progress / 100)
+                
+                # الزر
+                if st.button(f"📖 عرض المسار", key=f"btn_{tid}", use_container_width=True):
                     st.session_state.selected_track = tid
                     st.rerun()
 else:
+    # =============== صفحة المسار المفصلة ===============
     tid = st.session_state.selected_track
     track = tracks[tid]
     
-    # زر العودة
-    if st.button("🔙 العودة إلى التخصصات"):
-        del st.session_state.selected_track
-        st.rerun()
+    # رأس الصفحة
+    col_back, col_title, col_reset = st.columns([1, 3, 1])
     
-    st.header(f"🗺️ {track['name']}")
+    with col_back:
+        if st.button("🔙 العودة", use_container_width=True):
+            del st.session_state.selected_track
+            st.rerun()
+    
+    with col_title:
+        st.header(f"{track['name']}")
+    
+    with col_reset:
+        if st.button("🔄 إعادة تعيين", use_container_width=True):
+            reset_track(tid)
+            st.rerun()
+    
+    # معلومات المسار
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        st.info(f"📊 المستوى: {track['difficulty']}")
+    with col2:
+        st.info(f"⏱️ المدة: {track['duration']}")
+    with col3:
+        progress = get_progress_percentage(tid)
+        st.info(f"✅ التقدم: {progress}%")
+    
     with st.expander("📌 تعريف المسار", expanded=True):
         st.write(track["long_desc"])
-    
-    # إعادة تعيين التقدم
-    if st.button("🔄 إعادة تعيين التقدم لهذا المسار"):
-        reset_track(tid)
-        st.rerun()
     
     st.markdown("---")
     st.subheader("📚 خطوات التعلم (بالترتيب)")
@@ -153,29 +287,105 @@ else:
     completed_count = 0
     for i, step in enumerate(track["steps"]):
         with st.container(border=True):
-            st.markdown(f"**المرحلة {i+1}: {step['title']}**")
-            st.write(f"📝 {step['desc']}")
+            # رأس المرحلة
+            col_num, col_title, col_duration = st.columns([1, 3, 2])
+            with col_num:
+                st.markdown(f"### المرحلة {i+1}")
+            with col_title:
+                st.markdown(f"### {step['title']}")
+            with col_duration:
+                st.caption(f"⏱️ {step['duration']}")
             
-            col1, col2 = st.columns(2)
-            with col1:
-                st.link_button("🇸🇴 مصدر عربي - ابدأ الآن", step["ar"], use_container_width=True)
-            with col2:
-                st.link_button("🇬🇧 مصدر إنجليزي - Start Now", step["en"], use_container_width=True)
+            # الوصف
+            st.write(f"📝 **{step['desc']}'")
+            
+            # الروابط مع معاينة الفيديو
+            tab1, tab2, tab3 = st.tabs(["🇸🇦 مصدر عربي", "🇬🇧 مصدر إنجليزي", "📊 إحصائيات"])
+            
+            with tab1:
+                col_btn, col_preview = st.columns([1, 2])
+                with col_btn:
+                    st.link_button("▶️ ابدأ الآن", step["ar"], use_container_width=True)
+                with col_preview:
+                    if st.checkbox("👁️ معاينة الفيديو", key=f"preview_ar_{tid}_{i}"):
+                        embed_code = embed_youtube_video(step["ar"])
+                        if embed_code:
+                            st.components.v1.html(embed_code, height=400)
+                        else:
+                            st.warning("لا يمكن معاينة هذا الفيديو")
+            
+            with tab2:
+                col_btn, col_preview = st.columns([1, 2])
+                with col_btn:
+                    st.link_button("▶️ Start Now", step["en"], use_container_width=True)
+                with col_preview:
+                    if st.checkbox("👁️ Video Preview", key=f"preview_en_{tid}_{i}"):
+                        embed_code = embed_youtube_video(step["en"])
+                        if embed_code:
+                            st.components.v1.html(embed_code, height=400)
+                        else:
+                            st.warning("Cannot preview this video")
+            
+            with tab3:
+                st.markdown(f"""
+                - **العنوان:** {step['title']}
+                - **المدة المتوقعة:** {step['duration']}
+                - **نوع المحتوى:** فيديو تعليمي
+                - **المستوى:** {'مبتدئ' if i == 0 else 'متوسط' if i == 1 else 'متقدم'}
+                """)
             
             # شيكليست
             is_checked = st.session_state.progress.get(tid, {}).get(i, False)
-            checked = st.checkbox("✅ تم إكمال هذه المرحلة", value=is_checked, key=f"chk_{tid}_{i}")
+            checked = st.checkbox("✅ تم إكمال هذه المرحلة", value=is_checked, key=f"chk_{tid}_{i}", label_visibility="visible")
+            
             if checked != is_checked:
                 mark_completed(tid, i, checked)
                 st.rerun()
+            
             if checked:
                 completed_count += 1
+                st.success("🎉 مرحلة مكتملة!")
     
+    # ملخص التقدم
+    st.markdown("---")
     total = len(track["steps"])
     percent = int(completed_count / total * 100) if total else 0
-    st.markdown("---")
-    st.markdown(f"### 📊 تقدمك: {completed_count} من {total} مرحلة مكتملة ({percent}%)")
-    st.progress(percent / 100)
+    
+    col1, col2 = st.columns([3, 1])
+    with col1:
+        st.markdown(f"### 📊 تقدمك: {completed_count} من {total} مرحلة مكتملة")
+        st.progress(percent / 100)
+    with col2:
+        st.metric("نسبة الإنجاز", f"{percent}%")
+    
+    # عند الانتهاء
     if completed_count == total and total > 0:
         st.balloons()
-        st.success("🎉 تهانينا! لقد أكملت هذا المسار بالكامل.")
+        st.success(f"🎉 **تهانينا!** لقد أكملت مسار **{track['name']}** بالكامل!")
+        
+        # شهادة إنجاز
+        with st.container(border=True):
+            st.markdown(f"""
+            ### 🏆 شهادة إنجاز
+            
+            تم منح هذه الشهادة إلى: **{st.session_state.user_name if st.session_state.user_name else 'الطالب المجتهد'}**
+            
+            لإكماله مسار: **{track['name']}**
+            
+            التاريخ: **{datetime.now().strftime('%Y-%m-%d')}**
+            
+            _جميع الحقوق محفوظة لمنصة التعلم 2026_
+            """)
+            
+            if st.button("🖨️ طباعة الشهادة"):
+                st.balloons()
+                st.info("تم نسخ الشهادة! يمكنك طباعتها من المتصفح (Ctrl+P)")
+
+# Footer
+st.markdown("---")
+st.markdown("""
+<div style="text-align: center; color: #888;">
+    <p>💡 نصيحة: احفظ تقدمك بشكل منتظم • تعلم بانتظام • حقق أحلامك</p>
+    <p>© 2026 منصة تعلم البرمجة • جميع الحقوق محفوظة</p>
+</div>
+""", unsafe_allow_html=True)
