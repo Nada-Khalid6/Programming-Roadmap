@@ -268,7 +268,7 @@ def main():
             لكل درس مصدر عربي وآخر إنجليزي من يوتيوب.
             يمكنك تحديد المربع بعد إتمام كل درس لتتبع تقدمك.
             """)
-        st.caption("By: Nada Khalid)
+        st.caption("By: Nada Khalid✨♥")
     
     if st.session_state.selected_track is None:
         show_tracks()
