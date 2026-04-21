@@ -1,0 +1,87 @@
+{
+  "tracks": [
+    {
+      "id": 1,
+      "name": "أساسيات البرمجة (Python)",
+      "icon": "🐍",
+      "track_description": "هذا المسار مخصص للمبتدئين تماماً. ستتعلم أساسيات البرمكة مثل المتغيرات، الشروط، الحلقات، الدوال، والقوائم باستخدام لغة Python. بعد إكمال هذا المسار، ستكون قادراً على كتابة برامج بسيطة وفهم المنطق البرمجي. يتكون المسار من 3 مراحل: مقدمة، أساسيات Python، ومشروع عملي.",
+      "description": "رحلة متكاملة لتعلم البرمجة من الصفر باستخدام Python"
+    },
+    {
+      "id": 2,
+      "name": "تطوير واجهات الويب (Frontend)",
+      "icon": "🌐",
+      "track_description": "في هذا المسار ستتعلم بناء واجهات مواقع الويب الحديثة. نبدأ بـ HTML و CSS لإنشاء الهيكل والتصميم، ثم ننتقل إلى JavaScript لإضافة التفاعلية. أخيراً، نتعلم إطار عمل React لبناء تطبيقات متقدمة. المسار مناسب لمن يعرف أساسيات البرمجة ويريد التخصص في تطوير الواجهات الأمامية.",
+      "description": "من الصفر إلى الاحتراف في HTML، CSS، JavaScript و React"
+    },
+    {
+      "id": 3,
+      "name": "قواعد البيانات (SQL)",
+      "icon": "🗄️",
+      "track_description": "تعلم كيفية تصميم وإدارة قواعد البيانات باستخدام SQL. سنغطي إنشاء الجداول، الاستعلامات، الانضمامات، والفهارس. هذا المسار ضروري لأي مطور يريد بناء تطبيقات تعتمد على البيانات.",
+      "description": "فهم قواعد البيانات العلائقية ولغة SQL من البداية"
+    }
+  ],
+  "roadmaps": {
+    "1": [
+      {
+        "title": "مقدمة في البرمجة والخوارزميات",
+        "description": "فهم ما هي البرمجة، الخوارزميات، وكيف يعمل الكمبيوتر.",
+        "source_arabic": "https://youtube.com/playlist?list=PL9YIYM2p5i5l3K6E7F8G9H0J1K2L3M4N5O",
+        "source_english": "https://youtube.com/playlist?list=PLhQjrBD2T381k8J6K7L9M0N1O2P3Q4R5S6T"
+      },
+      {
+        "title": "تعلم Python - الأساسيات",
+        "description": "المتغيرات، أنواع البيانات، الجمل الشرطية، الحلقات، الدوال.",
+        "source_arabic": "https://youtube.com/playlist?list=PLMYF6NkLrdNvVZ0yQ5yQ5yQ5yQ5yQ5yQ5",
+        "source_english": "https://youtube.com/playlist?list=PLXuTq7QK7l3sZ8Y9A0B1C2D3E4F5G6H7I8J"
+      },
+      {
+        "title": "مشروع عملي: تطبيق آلة حاسبة",
+        "description": "تطبيق كل ما تعلمته في مشروع حقيقي.",
+        "source_arabic": "https://youtube.com/playlist?list=PLA1B2C3D4E5F6G7H8I9J",
+        "source_english": "https://youtube.com/playlist?list=PLK1L2M3N4O5P6Q7R8S9T"
+      }
+    ],
+    "2": [
+      {
+        "title": "HTML5 و CSS3 - الأساسيات",
+        "description": "بناء هيكل الصفحات وتنسيقها باستخدام HTML و CSS.",
+        "source_arabic": "https://youtube.com/playlist?list=PLU7Z6L1Q5K9J8H7G6F5D4S3A2",
+        "source_english": "https://youtube.com/playlist?list=PL4cUxeGkcC9gB9fA8B7C6D5E4F3G2H1I0J"
+      },
+      {
+        "title": "JavaScript للمبتدئين",
+        "description": "التعامل مع DOM، الأحداث، والوظائف الأساسية.",
+        "source_arabic": "https://youtube.com/playlist?list=PL9YIYM2p5i5l3K6E7F8G9H0J1K2L3M4N5O",
+        "source_english": "https://youtube.com/playlist?list=PLillGF-RfqbYE6IkUi7n8F6Q8L7M9N0O1P"
+      },
+      {
+        "title": "React.js - بناء تطبيقات متقدمة",
+        "description": "مكونات، حالة، خصائص، وتطبيق كامل.",
+        "source_arabic": "https://youtube.com/playlist?list=PLA1B2C3D4E5F6G7H8I9J",
+        "source_english": "https://youtube.com/playlist?list=PLN3n1USn4xlmyw3ebBuZmknGKr6LhM2fB"
+      }
+    ],
+    "3": [
+      {
+        "title": "مقدمة في قواعد البيانات",
+        "description": "ما هي قواعد البيانات؟ أنواعها، ومفاهيم أساسية.",
+        "source_arabic": "https://youtube.com/playlist?list=PLXYZ1_2_3_4_5_6_7_8_9",
+        "source_english": "https://youtube.com/playlist?list=PLABC1_2_3_4_5_6_7_8_9"
+      },
+      {
+        "title": "SQL الأساسي - استعلامات وفلترة",
+        "description": "SELECT, WHERE, ORDER BY, GROUP BY",
+        "source_arabic": "https://youtube.com/playlist?list=PLDEF1_2_3_4_5_6_7_8_9",
+        "source_english": "https://youtube.com/playlist?list=PLGHI1_2_3_4_5_6_7_8_9"
+      },
+      {
+        "title": "Join وعلاقات بين الجداول",
+        "description": "INNER JOIN, LEFT JOIN, تصميم قواعد بيانات.",
+        "source_arabic": "https://youtube.com/playlist?list=PLJKL1_2_3_4_5_6_7_8_9",
+        "source_english": "https://youtube.com/playlist?list=PLMNO1_2_3_4_5_6_7_8_9"
+      }
+    ]
+  }
+}
