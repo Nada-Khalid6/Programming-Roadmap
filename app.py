@@ -5,7 +5,7 @@ import os
 
 # إعدادات الصفحة
 st.set_page_config(
-    page_title="منصة تعلم البرمجة",
+    page_title="Programming_Platform",
     page_icon="💻",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -133,7 +133,7 @@ tracks = {
         ]
     },
     4: {
-        "name": "🔐 الأمان السيبراني (Cyber Security)",
+        "name": "🔐 الأمن السيبراني (Cyber Security)",
         "description": "تعلم أساسيات الأمان السيبراني والحماية من التهديدات",
         "long_desc": "في هذا المسار ستتعلم أساسيات الأمان السيبراني، أنواع الهجمات، أدوات الحماية، واختبار الاختراق. مسار شامل لحماية الأنظمة والبيانات.",
         "difficulty": "متوسط - متقدم",
@@ -207,9 +207,9 @@ tracks = {
         ]
     },
     6: {
-        "name": "🎓 مسار التعلم الحي (Learning Live)",
-        "description": "جلسات حية تفاعلية مع مدربين متخصصين",
-        "long_desc": "مسار فريد يتضمن جلسات تدريبية حية مباشرة مع مدربين متخصصين. تفاعل مباشر، أسئلة وأجوبة حقيقية، ومشاريع عملية جماعية. احصل على شهادة معتمدة بعد الانتهاء.",
+        "name": "Learning Live",
+        "description": "ابدأ دلوقتي معانا",
+        "long_desc": "تقدر تتابع معانا محاضره بمحاضره من دلوقتي احنا هنبدأ دلوقتي انت هتبدأ امتي 😎",
         "difficulty": "متنوع",
         "duration": "12 أسبوع",
         "steps": [
@@ -304,7 +304,7 @@ with st.sidebar:
     st.markdown("### 📌 القائمة")
     
     # زر الرئيسية
-    if st.button("🏠 الرئيسية", use_container_width=True, key="nav_home"):
+    if st.button("🏠 Home", use_container_width=True, key="nav_home"):
         st.session_state.page = "home"
         st.rerun()
     
@@ -550,7 +550,7 @@ else:
 st.markdown("---")
 st.markdown("""
 <div style="text-align: center; color: #888;">
-    <p>ProgrammingRoadmap🕸⚡</p>
+    <p>⚡ProgrammingRoadmap🕸⚡</p>
     <p>✨By:Nada Khalid✨</p>
 </div>
 """, unsafe_allow_html=True)
