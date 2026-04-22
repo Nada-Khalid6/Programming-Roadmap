@@ -207,7 +207,7 @@ tracks = {
         ]
     },
     6: {
-        "name": "Learning Live",
+        "name": "🎓 Learning Live",
         "description": "ابدأ دلوقتي معانا",
         "long_desc": "تقدر تتابع معانا محاضره بمحاضره من دلوقتي احنا هنبدأ دلوقتي انت هتبدأ امتي 😎",
         "difficulty": "متنوع",
@@ -240,6 +240,80 @@ tracks = {
                 "ar": "https://www.youtube.com/watch?v=KXY_J7CZ7Ow",
                 "en": "https://www.youtube.com/watch?v=8ext9G7xspg",
                 "duration": "ساعة ونصف"
+            }
+        ]
+    },
+    7: {
+        "name": "📱 Huawei Courses",
+        "description": "دورات متخصصة من شركة هواوي",
+        "long_desc": "دورات تدريبية معتمدة من شركة هواوي في مختلف المجالات التقنية. تعلم من خبراء هواوي وحصل على شهادات معترف بها عالمياً.",
+        "difficulty": "متوسط - متقدم",
+        "duration": "10 أسابيع",
+        "steps": [
+            {
+                "title": "أساسيات شبكات هواوي",
+                "desc": "مقدمة شاملة لأجهزة وتقنيات هواوي",
+                "ar": "https://www.youtube.com/playlist?list=PLDoPjvoNmBAw4eOj58MZPakHjaO3frVMF",
+                "en": "https://www.youtube.com/playlist?list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU",
+                "duration": "6 ساعات"
+            },
+            {
+                "title": "تكوين أجهزة الراوتر",
+                "desc": "تعلم كيفية تكوين أجهزة الراوتر من هواوي",
+                "ar": "https://www.youtube.com/playlist?list=PLDoPjvoNmBAyXeV5jC5Z8yMPuHO9eFXL7",
+                "en": "https://www.youtube.com/playlist?list=PL4cUxeGkcC9PI5PtvJ_je6S6EQG9GEsW9",
+                "duration": "8 ساعات"
+            },
+            {
+                "title": "الأمان في شبكات هواوي",
+                "desc": "حماية الشبكات باستخدام تقنيات هواوي",
+                "ar": "https://www.youtube.com/playlist?list=PLDoPjvoNmBAw4eOj58MZPakHjaO3frVMF",
+                "en": "https://www.youtube.com/playlist?list=PL08urSpVeNqjRQH2yVW-suQ318hJIUaDJ",
+                "duration": "7 ساعات"
+            },
+            {
+                "title": "مشروع عملي: بناء شبكة",
+                "desc": "بناء شبكة متكاملة باستخدام منتجات هواوي",
+                "ar": "https://www.youtube.com/watch?v=KXY_J7CZ7Ow",
+                "en": "https://www.youtube.com/watch?v=8ext9G7xspg",
+                "duration": "ساعتان"
+            }
+        ]
+    },
+    8: {
+        "name": "🌐 Cisco Courses",
+        "description": "دورات معتمدة من شركة سيسكو",
+        "long_desc": "برنامج تدريبي متكامل من سيسكو لتعلم تقنيات الشبكات والأمن. احصل على شهادات CCNA و CCNP المعترف بها عالمياً.",
+        "difficulty": "متوسط - متقدم",
+        "duration": "12 أسبوع",
+        "steps": [
+            {
+                "title": "مقدمة في شبكات سيسكو",
+                "desc": "أساسيات تقنيات سيسكو والشبكات",
+                "ar": "https://www.youtube.com/playlist?list=PLDoPjvoNmBAw4eOj58MZPakHjaO3frVMF",
+                "en": "https://www.youtube.com/playlist?list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU",
+                "duration": "5 ساعات"
+            },
+            {
+                "title": "CCNA - أساسيات الشهادة",
+                "desc": "تحضير شامل لشهادة CCNA",
+                "ar": "https://www.youtube.com/playlist?list=PLDoPjvoNmBAyXeV5jC5Z8yMPuHO9eFXL7",
+                "en": "https://www.youtube.com/playlist?list=PL4cUxeGkcC9PI5PtvJ_je6S6EQG9GEsW9",
+                "duration": "10 ساعات"
+            },
+            {
+                "title": "Routing و Switching",
+                "desc": "تعلم التوجيه والتبديل في سيسكو",
+                "ar": "https://www.youtube.com/playlist?list=PLDoPjvoNmBAw4eOj58MZPakHjaO3frVMF",
+                "en": "https://www.youtube.com/playlist?list=PL08urSpVeNqjRQH2yVW-suQ318hJIUaDJ",
+                "duration": "9 ساعات"
+            },
+            {
+                "title": "أمان الشبكات",
+                "desc": "تطبيق أفضل الممارسات الأمنية في سيسكو",
+                "ar": "https://www.youtube.com/watch?v=KXY_J7CZ7Ow",
+                "en": "https://www.youtube.com/watch?v=8ext9G7xspg",
+                "duration": "8 ساعات"
             }
         ]
     }
@@ -304,7 +378,7 @@ with st.sidebar:
     st.markdown("### 📌 القائمة")
     
     # زر الرئيسية
-    if st.button("🏠 Home", use_container_width=True, key="nav_home"):
+    if st.button("🏠 الرئيسية", use_container_width=True, key="nav_home"):
         st.session_state.page = "home"
         st.rerun()
     
@@ -365,49 +439,26 @@ with st.sidebar:
 # =============== الصفحة الرئيسية ===============
 if st.session_state.page == "home":
     st.title("🚀 منصة مسارات تعلم البرمجة")
-    st.markdown("### اختر تخصصك وابدأ رحلة التعلم خطوة بخطوة")
-    
     st.markdown("---")
     st.markdown("""
     ### 🎯 أهلاً وسهلاً بك!
     
     هذه المنصة توفر لك مسارات تعليمية شاملة في مختلف المجالات البرمجية والتقنية. 
-    اختر المسار الذي يناسبك من القائمة الجانبية وابدأ رحلة التعلم الآن!
+    اختر المسار الذي يناسبك من القائمة ا��جانبية وابدأ رحلة التعلم الآن!
     
     ✨ **المميزات:**
-    - مسارات متكاملة من المستوى المبتدئ إلى المتقدم
-    - محتوى عربي وإنجليزي
-    - تتبع التقدم والإحصائيات
-    - شهادات عند إكمال كل مسار
-    - مشاريع عملية واقعية
+    - ✅ مسارات متكاملة من المستوى المبتدئ إلى المتقدم
+    - 🌍 محتوى عربي وإنجليزي
+    - 📊 تتبع التقدم والإحصائيات
+    - 🏆 شهادات عند إكمال كل مسار
+    - 💼 مشاريع عملية واقعية
+    
+    ---
+    
+    ### 📍 ابدأ رحلتك الآن
+    
+    اضغط على أحد المسارات من القائمة الجانبية واختر ما يناسبك! 🚀
     """)
-    
-    st.markdown("---")
-    st.subheader("📚 جميع المسارات المتاحة")
-    
-    col1, col2, col3 = st.columns(3)
-    
-    for idx, (tid, track) in enumerate(tracks.items()):
-        with [col1, col2, col3][idx % 3]:
-            with st.container(border=True):
-                st.subheader(track["name"])
-                st.write(track["description"])
-                
-                # إحصائيات المسار
-                progress = get_progress_percentage(tid)
-                col_a, col_b = st.columns(2)
-                with col_a:
-                    st.caption(f"⏱️ {track['duration']}")
-                with col_b:
-                    st.caption(f"📈 {progress}%")
-                
-                # شريط التقدم
-                st.progress(progress / 100)
-                
-                # الزر
-                if st.button(f"📖 عرض المسار", key=f"btn_{tid}", use_container_width=True):
-                    st.session_state.page = f"track_{tid}"
-                    st.rerun()
 
 # =============== صفحات المسارات ===============
 else:
@@ -465,7 +516,7 @@ else:
                 st.write(f"📝 **{step['desc']}'")
                 
                 # الروابط مع معاينة الفيديو
-                tab1, tab2, tab3 = st.tabs([" مصدر عربي", " مصدر إنجليزي", "📊 إحصائيات"])
+                tab1, tab2, tab3 = st.tabs(["🇸🇦 مصدر عربي", "🇬🇧 مصدر إنجليزي", "📊 إحصائيات"])
                 
                 with tab1:
                     col_btn, col_preview = st.columns([1, 2])
