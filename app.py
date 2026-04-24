@@ -570,6 +570,6 @@ st.markdown("---")
 st.markdown("""
 <div style="text-align: center; color: #888;">
     <p>⚡ProgrammingRoadmap🕸⚡</p>
-    <p>✨By:Nada Khalid✨</p>
+    <p>✨By:𝑪𝒚𝒃𝒆𝒓 𝑴𝒊𝒏𝒅𝒔✨</p>
 </div>
 """, unsafe_allow_html=True)
