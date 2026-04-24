@@ -257,9 +257,8 @@ tracks = {
             {
                 "title": "كورس 6 - DataCom",
                 "desc": "الشبكات السحابية وتقنيات SDN",
-                "ar": "
-",
-                "en": "",
+                "ar": "https://youtu.be/s4VCJDlkpgQ?si=2NB7d4dvp81v-8gM",
+                "en": "https://youtu.be/s4VCJDlkpgQ?si=2NB7d4dvp81v-8gM",
                 "duration": "7 ساعات"
             },
             {
