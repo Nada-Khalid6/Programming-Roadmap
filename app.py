@@ -250,8 +250,7 @@ tracks = {
             {
                 "title": "كورس 5 - DataCom",
                 "desc": "الشبكات اللاسلكية وتقنيات Wi-Fi",
-                "ar": "https://youtu.be/aIMavZAJ-9w?si=Mfd75eKI9i-9OPu-
-",
+                "ar": "https://youtu.be/aIMavZAJ-9w?si=Mfd75eKI9i-9OPu-",
                 "en": "https://youtu.be/aIMavZAJ-9w?si=Mfd75eKI9i-9OPu-",
                 "duration": "6 ساعات"
             },
