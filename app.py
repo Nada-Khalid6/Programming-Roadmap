@@ -112,8 +112,8 @@ tracks = {
             {
                 "title": "مقدمة في قواعد البيانات",
                 "desc": "أنواع قواعد البيانات ومفاهيم أساسية",
-                "ar": "https://youtube.com/@naamamajid?si=g5ELsJ_e4x4SPkFr",
-                "en": "https://youtube.com/playlist?list=PLBlnK6fEyqRi_CUQ-FXxgzKQ1dwr_ZJWZ&si=8tXXkUeC4dRoch-r",
+                "ar": "https://youtube.com/playlist?list=PLUgzfC8Ca25u_fqLoYcAl2CVbDNfLWqVx&si=-WWM6O6Q9KwaZF2b",
+                "en": "https://youtube.com/playlist?list=PLUgzfC8Ca25sfrLPvLQg1YOU1RhUcfwsR&si=1gCBbdA0IDl7c9wA",
                 "duration": "4 ساعات"
             },
             {
