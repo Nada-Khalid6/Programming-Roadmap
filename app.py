@@ -290,29 +290,29 @@ tracks = {
             {
                 "title": "مقدمة في شبكات سيسكو",
                 "desc": "أساسيات تقنيات سيسكو والشبكات",
-                "ar": "https://www.youtube.com/playlist?list=PLDoPjvoNmBAw4eOj58MZPakHjaO3frVMF",
-                "en": "https://www.youtube.com/playlist?list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU",
+                "ar": "https://youtu.be/97u8e0G4RJY?si=vYYtB7U3iU-Fi9Fq",
+                "en": "https://youtu.be/97u8e0G4RJY?si=vYYtB7U3iU-Fi9Fq",
                 "duration": "5 ساعات"
             },
             {
                 "title": "CCNA - أساسيات الشهادة",
                 "desc": "تحضير شامل لشهادة CCNA",
-                "ar": "https://www.youtube.com/playlist?list=PLDoPjvoNmBAyXeV5jC5Z8yMPuHO9eFXL7",
-                "en": "https://www.youtube.com/playlist?list=PL4cUxeGkcC9PI5PtvJ_je6S6EQG9GEsW9",
+                "ar": "https://youtu.be/TrQljnE49-o?si=VIkh5d6Vi1Irjwax",
+                "en": "https://youtu.be/4u3LVXDOkyw?si=wkzWOKJgMNjopXk_",
                 "duration": "10 ساعات"
             },
             {
                 "title": "Routing و Switching",
                 "desc": "تعلم التوجيه والتبديل في سيسكو",
-                "ar": "https://www.youtube.com/playlist?list=PLDoPjvoNmBAw4eOj58MZPakHjaO3frVMF",
-                "en": "https://www.youtube.com/playlist?list=PL08urSpVeNqjRQH2yVW-suQ318hJIUaDJ",
+                "ar": "https://youtu.be/eGxl085nN-s?si=cr31qr84DhlcY49c",
+                "en": "https://youtu.be/7dXBN8a-X2U?si=KywiEH-HAAcs9z2M",
                 "duration": "9 ساعات"
             },
             {
                 "title": "أمان الشبكات",
                 "desc": "تطبيق أفضل الممارسات الأمنية في سيسكو",
-                "ar": "https://www.youtube.com/watch?v=KXY_J7CZ7Ow",
-                "en": "https://www.youtube.com/watch?v=8ext9G7xspg",
+                "ar": "https://youtu.be/4KtcomKXO-Q?si=16EEXfeSWWafWjUu",
+                "en": "https://youtu.be/4KtcomKXO-Q?si=16EEXfeSWWafWjUu",
                 "duration": "8 ساعات"
             }
         ]
