@@ -112,22 +112,22 @@ tracks = {
             {
                 "title": "مقدمة في قواعد البيانات",
                 "desc": "أنواع قواعد البيانات ومفاهيم أساسية",
-                "ar": "https://www.youtube.com/playlist?list=PLDoPjvoNmBAw4eOj58MZPakHjaO3frVMF",
-                "en": "https://www.youtube.com/playlist?list=PL08urSpVeNqjRQH2yVW-suQ318hJIUaDJ",
+                "ar": "https://youtube.com/@naamamajid?si=g5ELsJ_e4x4SPkFr",
+                "en": "https://youtube.com/playlist?list=PLBlnK6fEyqRi_CUQ-FXxgzKQ1dwr_ZJWZ&si=8tXXkUeC4dRoch-r",
                 "duration": "4 ساعات"
             },
             {
                 "title": "SQL الأساسي",
                 "desc": "SELECT, WHERE, ORDER BY, GROUP BY",
-                "ar": "https://www.youtube.com/playlist?list=PLDoPjvoNmBAyXeV5jC5Z8yMPuHO9eFXL7",
-                "en": "https://www.youtube.com/playlist?list=PLUDwpEzHYYLvWEVDNFEv5XBJ2-kxNXyRP",
+                "ar": "https://youtube.com/playlist?list=PLxbVBWjVdAEj8TmOUKPG0avUmLqSoQOpf&si=_3fvbUi1CN6NLB1D",
+                "en": "https://youtu.be/SSKVgrwhzus?si=EHjR53e32khrqEL9",
                 "duration": "6 ساعات"
             },
             {
                 "title": "Join والعلاقات",
                 "desc": "INNER JOIN, LEFT JOIN, RIGHT JOIN",
-                "ar": "https://www.youtube.com/playlist?list=PLDoPjvoNmBAw4eOj58MZPakHjaO3frVMF",
-                "en": "https://www.youtube.com/playlist?list=PL9SnRnlzoyIENV8Tphe0b3qMLKfjlezQC",
+                "ar": "https://youtu.be/bu6BqIkyPUk?si=ZxXbxYEqIEJ0xEXD",
+                "en": "https://youtu.be/DjfVI_mNYwA?si=K8rZPI5FQHDUb9UO",
                 "duration": "5 ساعات"
             }
         ]
