@@ -54,7 +54,7 @@ tracks = {
                 "desc": "فهم ما هي البرمجة والخوارزميات",
                 "ar": "https://youtube.com/playlist?list=PLRtfJqT1hc33qtw3SV7SItJF1oV_jwEfu&si=UZnpTtJB6EYPqk2P",
                 "en": "https://youtube.com/playlist?list=PLRtfJqT1hc33qtw3SV7SItJF1oV_jwEfu&si=UZnpTtJB6EYPqk2P",
-                "duration": "ساعة 1"
+                "duration": "1 ساعة"
             },
             {
                 "title": "تعلم Python - الأساسيات",
