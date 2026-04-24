@@ -33,7 +33,6 @@ st.markdown("""
         gap: 1rem;
     }
     
-    /* تنسيق أزرار القائمة الجانبية */
     .nav-button {
         margin: 0.5rem 0;
     }
@@ -68,7 +67,7 @@ tracks = {
                 "desc": "تطبيق عملي لكل ما تعلمته",
                 "ar": "https://youtu.be/y_LGngsl0-E?si=TwBfMi6WnLDiSrPK",
                 "en": "https://youtu.be/y_LGngsl0-E?si=TwBfMi6WnLDiSrPK",
-                "duration":" ساعة 1"
+                "duration": "1 ساعة"
             }
         ]
     },
@@ -207,80 +206,80 @@ tracks = {
         ]
     },
     6: {
-        "name": "🎓 Learning Live",
-        "description": "ابدأ دلوقتي معانا",
-        "long_desc": "تقدر تتابع معانا محاضره بمحاضره من دلوقتي احنا هنبدأ دلوقتي انت هتبدأ امتي 😎",
-        "difficulty": "متنوع",
-        "duration": "12 أسبوع",
-        "steps": [
-            {
-                "title": "الجلسة الأولى: مقدمة شاملة",
-                "desc": "التعرف على البرنامج والمدربين والطلاب",
-                "ar": "https://www.youtube.com/playlist?list=PLDoPjvoNmBAw4eOj58MZPakHjaO3frVMF",
-                "en": "https://www.youtube.com/playlist?list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU",
-                "duration": "ساعة"
-            },
-            {
-                "title": "ورشة عمل: بناء مشروع فعلي",
-                "desc": "مشروع عملي من البداية إلى النهاية",
-                "ar": "https://www.youtube.com/playlist?list=PLDoPjvoNmBAyXeV5jC5Z8yMPuHO9eFXL7",
-                "en": "https://www.youtube.com/playlist?list=PL4cUxeGkcC9PI5PtvJ_je6S6EQG9GEsW9",
-                "duration": "ساعتان"
-            },
-            {
-                "title": "جلسة أسئلة وأجوبة",
-                "desc": "اطرح أسئلتك واحصل على إجابات من الخبراء",
-                "ar": "https://www.youtube.com/playlist?list=PLDoPjvoNmBAw4eOj58MZPakHjaO3frVMF",
-                "en": "https://www.youtube.com/playlist?list=PL08urSpVeNqjRQH2yVW-suQ318hJIUaDJ",
-                "duration": "45 دقيقة"
-            },
-            {
-                "title": "عرض المشاريع والتقييم",
-                "desc": "قدم مشروعك واحصل على تقييم من المتخصصين",
-                "ar": "https://www.youtube.com/watch?v=KXY_J7CZ7Ow",
-                "en": "https://www.youtube.com/watch?v=8ext9G7xspg",
-                "duration": "ساعة ونصف"
-            }
-        ]
-    },
-    7: {
         "name": "📱 Huawei Courses",
-        "description": "دورات متخصصة من شركة هواوي",
+        "description": "دورات متخصصة من شركة هواوي - Networking, DataCom, Security",
         "long_desc": "دورات تدريبية معتمدة من شركة هواوي في مختلف المجالات التقنية. تعلم من خبراء هواوي وحصل على شهادات معترف بها عالمياً.",
         "difficulty": "متوسط - متقدم",
         "duration": "10 أسابيع",
         "steps": [
             {
-                "title": "أساسيات شبكات هواوي",
-                "desc": "مقدمة شاملة لأجهزة وتقنيات هواوي",
-                "ar": "https://www.youtube.com/playlist?list=PLDoPjvoNmBAw4eOj58MZPakHjaO3frVMF",
-                "en": "https://www.youtube.com/playlist?list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU",
+                "title": "كورس 1 - Networking",
+                "desc": "أساسيات الشبكات مع هواوي - المفاهيم الأساسية وبنية الشبكات",
+                "ar": "https://youtu.be/sRv5ZASs2eU?si=Jsb7V8VVripht_tD",
+                "en": "https://youtu.be/sRv5ZASs2eU?si=Jsb7V8VVripht_tD",
                 "duration": "6 ساعات"
             },
             {
-                "title": "تكوين أجهزة الراوتر",
-                "desc": "تعلم كيفية تكوين أجهزة الراوتر من هواوي",
-                "ar": "https://www.youtube.com/playlist?list=PLDoPjvoNmBAyXeV5jC5Z8yMPuHO9eFXL7",
-                "en": "https://www.youtube.com/playlist?list=PL4cUxeGkcC9PI5PtvJ_je6S6EQG9GEsW9",
-                "duration": "8 ساعات"
+                "title": "كورس 1 - DataCom",
+                "desc": "مقدمة في اتصالات البيانات والشبكات الرقمية",
+                "ar": "https://youtu.be/onDhv_QzfWI?si=E5PMG00BeLTVyT3_",
+                "en": "https://youtu.be/onDhv_QzfWI?si=E5PMG00BeLTVyT3_",
+                "duration": "5 ساعات"
             },
             {
-                "title": "الأمان في شبكات هواوي",
-                "desc": "حماية الشبكات باستخدام تقنيات هواوي",
-                "ar": "https://www.youtube.com/playlist?list=PLDoPjvoNmBAw4eOj58MZPakHjaO3frVMF",
-                "en": "https://www.youtube.com/playlist?list=PL08urSpVeNqjRQH2yVW-suQ318hJIUaDJ",
+                "title": "كورس 2 - DataCom",
+                "desc": "بروتوكولات الشبكة وطبقات OSI",
+                "ar": "https://youtu.be/N_hEeQ0xfNg?si=AfqPJ4Zd-VOQJitU",
+                "en": "https://youtu.be/N_hEeQ0xfNg?si=AfqPJ4Zd-VOQJitU",
+                "duration": "6 ساعات"
+            },
+            {
+                "title": "كورس 3 - DataCom",
+                "desc": "التوجيه والتبديل في شبكات البيانات",
+                "ar": "https://youtu.be/mkRM-EbuoGw?si=PmR4QOoKZIdsP28m",
+                "en": "https://youtu.be/mkRM-EbuoGw?si=PmR4QOoKZIdsP28m",
+                "duration": "6 ساعات"
+            },
+            {
+                "title": "كورس 4 - DataCom",
+                "desc": "إدارة الشبكات ومراقبة الأداء",
+                "ar": "https://youtu.be/aIMavZAJ-9w?si=AuB81fBp3eVv5t0l",
+                "en": "https://youtu.be/aIMavZAJ-9w?si=AuB81fBp3eVv5t0l",
+                "duration": "5 ساعات"
+            },
+            {
+                "title": "كورس 5 - DataCom",
+                "desc": "الشبكات اللاسلكية وتقنيات Wi-Fi",
+                "ar": "https://youtu.be/aIMavZAJ-9w?si=Mfd75eKI9i-9OPu-
+",
+                "en": "https://youtu.be/aIMavZAJ-9w?si=Mfd75eKI9i-9OPu-",
+                "duration": "6 ساعات"
+            },
+            {
+                "title": "كورس 6 - DataCom",
+                "desc": "الشبكات السحابية وتقنيات SDN",
+                "ar": "
+",
+                "en": "",
                 "duration": "7 ساعات"
             },
             {
-                "title": "مشروع عملي: بناء شبكة",
-                "desc": "بناء شبكة متكاملة باستخدام منتجات هواوي",
-                "ar": "https://www.youtube.com/watch?v=KXY_J7CZ7Ow",
-                "en": "https://www.youtube.com/watch?v=8ext9G7xspg",
-                "duration": "ساعتان"
+                "title": "كورس 1 - Security",
+                "desc": "أساسيات الأمن في شبكات هواوي والتهديدات الشائعة",
+                "ar": "https://youtu.be/1V0iYsS8LUw?si=ezfktKffwXwqdXO6",
+                "en": "https://youtu.be/1V0iYsS8LUw?si=ezfktKffwXwqdXO6",
+                "duration": "6 ساعات"
+            },
+            {
+                "title": "كورس 2 - Security",
+                "desc": "تطبيق سياسات الأمان وحماية الشبكات باستخدام تقنيات هواوي",
+                "ar": "https://youtu.be/4UcFVSHtcFc?si=Wf8P8eOk9rm3g_lG",
+                "en": "https://youtu.be/4UcFVSHtcFc?si=Wf8P8eOk9rm3g_lG",
+                "duration": "7 ساعات"
             }
         ]
     },
-    8: {
+    7: {
         "name": "🌐 Cisco Courses",
         "description": "دورات معتمدة من شركة سيسكو",
         "long_desc": "برنامج تدريبي متكامل من سيسكو لتعلم تقنيات الشبكات والأمن. احصل على شهادات CCNA و CCNP المعترف بها عالمياً.",
@@ -355,6 +354,9 @@ def embed_youtube_video(video_url):
     elif "watch?v=" in video_url:
         video_id = video_url.split("watch?v=")[1].split("&")[0]
         return f'<iframe width="100%" height="380" src="https://www.youtube.com/embed/{video_id}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+    elif "youtu.be/" in video_url:
+        video_id = video_url.split("youtu.be/")[1].split("?")[0]
+        return f'<iframe width="100%" height="380" src="https://www.youtube.com/embed/{video_id}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
     else:
         return None
 
@@ -377,7 +379,6 @@ with st.sidebar:
     # القائمة الجانبية
     st.markdown("### 📌 القائمة")
     
-    # زر الرئيسية
     if st.button("🏠 الرئيسية", use_container_width=True, key="nav_home"):
         st.session_state.page = "home"
         st.rerun()
@@ -385,11 +386,9 @@ with st.sidebar:
     st.markdown("---")
     st.markdown("### 📚 المسارات")
     
-    # أزرار المسارات
     for tid, track in tracks.items():
         progress = get_progress_percentage(tid)
         track_name = track["name"]
-        
         if st.button(f"{track_name}\n({progress}%)", use_container_width=True, key=f"nav_{tid}"):
             st.session_state.page = f"track_{tid}"
             st.rerun()
@@ -412,31 +411,14 @@ with st.sidebar:
     st.metric("المسارات المكتملة", f"{completed_count}/{len(tracks)}")
     
     st.markdown("---")
-    st.markdown("### ⚡ المميزات")
-    st.markdown("""
-    - ✅ مسارات متسلسلة
-    - 🌍 مصادر عربية وإنجليزية
-    - 📊 تتبع التقدم
-    - 🎯 أهداف واضحة
-    - 📜 شهادات عند الإنجاز
-    """)
-    
-    st.markdown("---")
     st.markdown("### 📞 تواصل معنا")
-    col1, col2, col3 = st.columns(3)
-    with col1:
-        st.link_button("Twitter", "https://twitter.com")
-    with col2:
-        st.link_button("GitHub", "https://github.com")
-    with col3:
-        st.link_button("Email", "mailto:contact@example.com")
+    st.link_button("📧 راسلنا على الإيميل", "mailto:nadaany1@gmail.com", use_container_width=True)
     
     st.markdown("---")
     st.caption("Keep Going💯🚀")
 
 # ======================= المحتوى الرئيسي =======================
 
-# =============== الصفحة الرئيسية ===============
 if st.session_state.page == "home":
     st.title("🚀 منصة مسارات تعلم البرمجة")
     st.markdown("---")
@@ -444,7 +426,7 @@ if st.session_state.page == "home":
     ### 🎯 أهلاً وسهلاً بك!
     
     هذه المنصة توفر لك مسارات تعليمية شاملة في مختلف المجالات البرمجية والتقنية. 
-    اختر المسار الذي يناسبك من القائمة ا��جانبية وابدأ رحلة التعلم الآن!
+    اختر المسار الذي يناسبك من القائمة الجانبية وابدأ رحلة التعلم الآن!
     
     ✨ **المميزات:**
     - ✅ مسارات متكاملة من المستوى المبتدئ إلى المتقدم
@@ -460,14 +442,11 @@ if st.session_state.page == "home":
     اضغط على أحد المسارات من القائمة الجانبية واختر ما يناسبك! 🚀
     """)
 
-# =============== صفحات المسارات ===============
 else:
-    # استخراج معرف المسار من اسم الصفحة
     if st.session_state.page.startswith("track_"):
         tid = int(st.session_state.page.split("_")[1])
         track = tracks[tid]
         
-        # رأس الصفحة
         col_back, col_title, col_reset = st.columns([1, 3, 1])
         
         with col_back:
@@ -483,7 +462,6 @@ else:
                 reset_track(tid)
                 st.rerun()
         
-        # معلومات المسار
         col1, col2, col3 = st.columns(3)
         with col1:
             st.info(f"📊 المستوى: {track['difficulty']}")
@@ -499,11 +477,9 @@ else:
         st.markdown("---")
         st.subheader("📚 خطوات التعلم (بالترتيب)")
         
-        # عرض المراحل
         completed_count = 0
         for i, step in enumerate(track["steps"]):
             with st.container(border=True):
-                # رأس المرحلة
                 col_num, col_title, col_duration = st.columns([1, 3, 2])
                 with col_num:
                     st.markdown(f"### المرحلة {i+1}")
@@ -512,10 +488,8 @@ else:
                 with col_duration:
                     st.caption(f"⏱️ {step['duration']}")
                 
-                # الوصف
-                st.write(f"📝 **{step['desc']}'")
+                st.write(f"📝 **{step['desc']}**")
                 
-                # الروابط مع معاينة الفيديو
                 tab1, tab2, tab3 = st.tabs(["🇸🇦 مصدر عربي", "🇬🇧 مصدر إنجليزي", "📊 إحصائيات"])
                 
                 with tab1:
@@ -550,7 +524,6 @@ else:
                     - **المستوى:** {'مبتدئ' if i == 0 else 'متوسط' if i == 1 else 'متقدم'}
                     """)
                 
-                # شيكليست
                 is_checked = st.session_state.progress.get(tid, {}).get(i, False)
                 checked = st.checkbox("✅ تم إكمال هذه المرحلة", value=is_checked, key=f"chk_{tid}_{i}", label_visibility="visible")
                 
@@ -562,7 +535,6 @@ else:
                     completed_count += 1
                     st.success("🎉 مرحلة مكتملة!")
         
-        # ملخص التقدم
         st.markdown("---")
         total = len(track["steps"])
         percent = int(completed_count / total * 100) if total else 0
@@ -574,12 +546,10 @@ else:
         with col2:
             st.metric("نسبة الإنجاز", f"{percent}%")
         
-        # عند الانتهاء
         if completed_count == total and total > 0:
             st.balloons()
             st.success(f"🎉 **تهانينا!** لقد أكملت مسار **{track['name']}** بالكامل!")
             
-            # شهادة إنجاز
             with st.container(border=True):
                 st.markdown(f"""
                 ### 🏆 شهادة إنجاز
