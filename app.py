@@ -1,4 +1,4 @@
-import streamlit as st
+ساعة 1mport streamlit as st
 import json
 from datetime import datetime
 import os
@@ -52,23 +52,23 @@ tracks = {
             {
                 "title": "مقدمة في البرمجة والخوارزميات",
                 "desc": "فهم ما هي البرمجة والخوارزميات",
-                "ar": "https://youtube.com/playlist?list=PLDoPjvoNmBAyE_gei5d18qkfIe-Z8mocs&si=_Gp8S1eHsAt2MraT",
-                "en": "https://youtube.com/playlist?list=PLDoPjvoNmBAyE_gei5d18qkfIe-Z8mocs&si=_Gp8S1eHsAt2MraT",
-                "duration": "3 ساعات"
+                "ar": "https://youtube.com/playlist?list=PLRtfJqT1hc33qtw3SV7SItJF1oV_jwEfu&si=UZnpTtJB6EYPqk2P",
+                "en": "https://youtube.com/playlist?list=PLRtfJqT1hc33qtw3SV7SItJF1oV_jwEfu&si=UZnpTtJB6EYPqk2P",
+                "duration": " ساعة 1"
             },
             {
                 "title": "تعلم Python - الأساسيات",
                 "desc": "المتغيرات، الجمل الشرطية، الحلقات، الدوال",
-                "ar": "https://www.youtube.com/playlist?list=PLDoPjvoNmBAyXeV5jC5Z8yMPuHO9eFXL7",
-                "en": "https://www.youtube.com/playlist?list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU",
-                "duration": "8 ساعات"
+                "ar": "https://youtube.com/playlist?list=PLDoPjvoNmBAyE_gei5d18qkfIe-Z8mocs&si=N9mVhLEDTOpHZrse",
+                "en": "https://youtube.com/playlist?list=PLsyeobzWxl7poL9JTVyndKe62ieoN-MZ3&si=6ADmspRx51bm_t0a",
+                "duration": "4 ساعات"
             },
             {
                 "title": "مشروع عملي: آلة حاسبة",
                 "desc": "تطبيق عملي لكل ما تعلمته",
-                "ar": "https://www.youtube.com/watch?v=KXY_J7CZ7Ow",
-                "en": "https://www.youtube.com/watch?v=8ext9G7xspg",
-                "duration": "ساعتان"
+                "ar": "https://youtu.be/y_LGngsl0-E?si=TwBfMi6WnLDiSrPK",
+                "en": "https://youtu.be/y_LGngsl0-E?si=TwBfMi6WnLDiSrPK",
+                "duration":" ساعة 1"
             }
         ]
     },
