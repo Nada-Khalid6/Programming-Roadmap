@@ -178,29 +178,29 @@ tracks = {
             {
                 "title": "مقدمة في تحليل البيانات",
                 "desc": "مفاهيم أساسية وأهمية البيانات",
-                "ar": "https://www.youtube.com/playlist?list=PLDoPjvoNmBAw4eOj58MZPakHjaO3frVMF",
-                "en": "https://www.youtube.com/playlist?list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU",
+                "ar": "https://youtu.be/oOv1gE0ER3I?si=S6JEYt6dap8jB5of",
+                "en": "https://www.youtube.com/live/JOKJ6g3gUFE?si=wznobdVturdK1cLk",
                 "duration": "3 ساعات"
             },
             {
                 "title": "Python مع Pandas و NumPy",
                 "desc": "مكتبات معالجة البيانات الأساسية",
-                "ar": "https://www.youtube.com/playlist?list=PLDoPjvoNmBAyXeV5jC5Z8yMPuHO9eFXL7",
-                "en": "https://www.youtube.com/playlist?list=PL4cUxeGkcC9PI5PtvJ_je6S6EQG9GEsW9",
+                "ar": "https://www.youtube.com/live/EsDFiZPljYo?si=rFyilj1qbFtdI_Vu",
+                "en": "https://youtu.be/Rq5gJVxz55Q?si=Knvv3KWOOxdsloZr",
                 "duration": "8 ساعات"
             },
             {
                 "title": "تصور البيانات (Data Visualization)",
                 "desc": "Matplotlib, Seaborn و Plotly",
-                "ar": "https://www.youtube.com/playlist?list=PLDoPjvoNmBAw4eOj58MZPakHjaO3frVMF",
-                "en": "https://www.youtube.com/playlist?list=PL08urSpVeNqjRQH2yVW-suQ318hJIUaDJ",
+                "ar": "https://youtu.be/9jrN5BPx4MI?si=_7GW_pPkKYBnKOe_",
+                "en": "https://youtube.com/playlist?list=PLUaB-1hjhk8FE_XZ87vPPSfHqb6OcM0cF&si=99b8Nzga7x07qlk9",
                 "duration": "6 ساعات"
             },
             {
                 "title": "الإحصائيات والتنبؤ",
                 "desc": "تحليل إحصائي وبناء نماذج توقعية",
-                "ar": "https://www.youtube.com/playlist?list=PLDoPjvoNmBAw4eOj58MZPakHjaO3frVMF",
-                "en": "https://www.youtube.com/playlist?list=PL9SnRnlzoyIENV8Tphe0b3qMLKfjlezQC",
+                "ar": "https://youtube.com/playlist?list=PLWd4nYaF_Vx7M4EDJzkiIgAvj3ZdJpSzM&si=0fMx-ciKPFVbB4xC",
+                "en": "https://youtube.com/playlist?list=PLWd4nYaF_Vx7M4EDJzkiIgAvj3ZdJpSzM&si=0fMx-ciKPFVbB4xC",
                 "duration": "7 ساعات"
             }
         ]
