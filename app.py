@@ -81,22 +81,22 @@ tracks = {
             {
                 "title": "HTML و CSS - الأساسيات",
                 "desc": "بناء هيكل وتنسيق الصفحات",
-                "ar": "https://www.youtube.com/playlist?list=PLDoPjvoNmBAw4eOj58MZPakHjaO3frVMF",
-                "en": "https://www.youtube.com/playlist?list=PL4cUxeGkcC9ivBf_eKCPIAYXWzLlPAm6G",
+                "ar": "https://youtu.be/6QAELgirvjs?si=VzncMpdCxnSJaBHv",
+                "en": "https://youtu.be/X1ulCwyhCVM?si=ylkyDoMxC-uiPIW5",
                 "duration": "5 ساعات"
             },
             {
                 "title": "JavaScript للمبتدئين",
                 "desc": "التعامل مع DOM والأحداث",
-                "ar": "https://www.youtube.com/playlist?list=PLDoPjvoNmBAw4eOj58MZPakHjaO3frVMF",
-                "en": "https://www.youtube.com/playlist?list=PL4cUxeGkcC9haRX4IsKjI31V6pSvyUvxl",
+                "ar": "https://youtu.be/NKY0Fx68OlE?si=LRU9C-wKY2gp4955",
+                "en": "https://youtu.be/jSeI6OfifCI?si=7Mr8Zkmt6zKU4j8F",
                 "duration": "7 ساعات"
             },
             {
                 "title": "React.js - تطبيقات متقدمة",
                 "desc": "مكونات، حالة، خصائص",
-                "ar": "https://www.youtube.com/playlist?list=PLDoPjvoNmBAyXeV5jC5Z8yMPuHO9eFXL7",
-                "en": "https://www.youtube.com/playlist?list=PL4cUxeGkcC9PI5PtvJ_je6S6EQG9GEsW9",
+                "ar": "https://youtu.be/bu6BqIkyPUk?si=ZxXbxYEqIEJ0xEXD",
+                "en": "https://youtu.be/DjfVI_mNYwA?si=K8rZPI5FQHDUb9UO",
                 "duration": "10 ساعات"
             }
         ]
