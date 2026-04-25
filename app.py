@@ -141,29 +141,29 @@ tracks = {
             {
                 "title": "مقدمة في الأمان السيبراني",
                 "desc": "المفاهيم الأساسية والتهديدات الشائعة",
-                "ar": "https://www.youtube.com/playlist?list=PLDoPjvoNmBAw4eOj58MZPakHjaO3frVMF",
-                "en": "https://www.youtube.com/playlist?list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU",
+                "ar": "http://www.youtube.com/playlist?list=PLFGgC1KKHUI3ML-ThlCKLhfkjOqKXmYPV",
+                "en": "http://www.youtube.com/watch?v=9HOpanT0GRs",
                 "duration": "5 ساعات"
             },
             {
                 "title": "التشفير وحماية البيانات",
                 "desc": "أنواع التشفير والمفاتيح والبروتوكولات الآمنة",
-                "ar": "https://www.youtube.com/playlist?list=PLDoPjvoNmBAyXeV5jC5Z8yMPuHO9eFXL7",
-                "en": "https://www.youtube.com/playlist?list=PL4cUxeGkcC9PI5PtvJ_je6S6EQG9GEsW9",
+                "ar": "http://www.youtube.com/playlist?list=PLqAMdk4yWL4tEngBHnfJnfkjU6t2U7G7h",
+                "en": "http://www.youtube.com/watch?v=C7vmouDOJYM",
                 "duration": "6 ساعات"
             },
             {
                 "title": "اختبار الاختراق (Penetration Testing)",
                 "desc": "أدوات واستراتيجيات اختبار الأمان",
-                "ar": "https://www.youtube.com/playlist?list=PLDoPjvoNmBAw4eOj58MZPakHjaO3frVMF",
-                "en": "https://www.youtube.com/playlist?list=PL08urSpVeNqjRQH2yVW-suQ318hJIUaDJ",
+                "ar": "http://www.youtube.com/playlist?list=PLZeCRehnm9LODnv6f8UjpqEcCRftzXQIK",
+                "en": "http://www.youtube.com/watch?v=3Kq1MIfTWCE",
                 "duration": "7 ساعات"
             },
             {
                 "title": "مشروع عملي: حماية شبكة",
                 "desc": "تطبيق عملي لحماية بيئة شبكة",
-                "ar": "https://www.youtube.com/watch?v=KXY_J7CZ7Ow",
-                "en": "https://www.youtube.com/watch?v=8ext9G7xspg",
+                "ar": "http://www.youtube.com/playlist?list=PLMYF6NkLrdN_eoPRObGsiEMES1KtU7dyC",
+                "en": "http://www.youtube.com/watch?v=NIRXtMg-0z8",
                 "duration": "ساعتان"
             }
         ]
